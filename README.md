@@ -3,7 +3,7 @@
 Implementation code of paper "An Interactive Multi-Task ESG Classification Method For Chinese Financial Texts".
 
 AMultiESG model introduces an interactive multi-task learning network ,which combines sentiment dictionary expansion and financial text classification, with financial text classification as the primary task and sentiment dictionary expansion as the secondary task. This network can promote the collaboration between the two tasks, so as to improve the performance of the two
-tasks. Training sets are not disclosed for commercial reasons.
+tasks. Only a few data sets are disclosed for commercial reasons.
 
 ## Configuration
 
