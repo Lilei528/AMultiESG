@@ -72,8 +72,9 @@ class My_text_cla(nn.Module):
         out_att= self.att_linear(out)
         att_matrix= torch.matmul(out_att,torch.transpose(out,1,2) )
         att_matrix=torch.nn.functional.softmax(att_matrix,dim=-1)
+        att_matrix=self.att_drop(att_matrix)
         out=torch.matmul(att_matrix,out)
-        #out=self.att_drop(out)
+        
         clauses=torch.permute(clauses, (0, 2, 1))
 
         z_dec=self.z_linear(z_dec)
@@ -98,7 +99,7 @@ class My_emo_word_exam(nn.Module):
             exit(-1)
         self.emo_linear_act=nn.ReLU()
         self.att_linear = nn.Linear(in_features=out_feat_size, out_features=out_feat_size)
-
+        self.att_drop=nn.Dropout(p=0.5)
         #emo_class_num+1
         #because label O is not considered
         self.hidden_linear=nn.Linear(in_features=p_cla_size+out_feat_size,out_features=emo_class_num+1)
@@ -109,6 +110,7 @@ class My_emo_word_exam(nn.Module):
         out_att = self.att_linear(out)
         att_matrix = torch.matmul(out_att, torch.transpose(out, 1, 2))
         att_matrix = torch.nn.functional.softmax(att_matrix, dim=-1)
+        att_matrix=self.att_drop(att_matrix)
         out = torch.matmul(att_matrix, out)
         z_dec=  torch.concat((p_cla,out),dim=-1 )
         out = self.hidden_linear(z_dec)

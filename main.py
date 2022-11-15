@@ -151,8 +151,8 @@ if __name__ == '__main__':
 
 
     # Data preprocessing, removing blank space, messing up, and adding emotional words
-    if (os.path.exists(pre_test_data_dir) and pre_test_data_dir!=None) \
-            and  (os.path.exists(pre_train_data_dir) and pre_train_data_dir != None) :
+    if (pre_test_data_dir!=None  and  os.path.exists(pre_test_data_dir) ) \
+            and  (pre_train_data_dir != None and  os.path.exists(pre_train_data_dir)) :
         print("*" * 20, 'Load the specified preprocessed text and do not preprocess any more', '*' * 20)
         end_dir=pre_train_data_dir
         end_test_dir=pre_test_data_dir
