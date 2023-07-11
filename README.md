@@ -11,14 +11,14 @@ A suitable gpu is needed in the experiment
 
 The bert and ltp models are used in the experiment. The version we use is the Chinese Bert of Harbin Institute of Technology. There are also models of test results. You can replace them yourself or download them through Baidu Netdisk:
 
-ltp: https://pan.baidu.com/s/1tYijZ_0Xv1_nTwKlPLyu9Q 
-	|  Extraction code：1kwl
+ltp: https://pan.baidu.com/s/1VnWQDU9_m_t34pLsUu3BTQ
+	|  Extraction code：72iu
 
-bert:https://pan.baidu.com/s/1WwbvVLPCdEkSNFmglAPnmw 
-	|  Extraction code：0ex3
+bert:https://pan.baidu.com/s/15p2ebPAilgRYTv13VgEZSg 
+	|  Extraction code：hw6q
 
-model: https://pan.baidu.com/s/1Ckdgjfrrm2y2EJYPkK4hEA 
-	|  Extraction code：iumm
+model: https://pan.baidu.com/s/1UeCSetnk-jsXsNsjTEN7Qg 
+	|  Extraction code：3mxa
 
 ## Quick Start
 
